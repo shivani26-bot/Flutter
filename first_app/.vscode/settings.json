@@ -1,0 +1,6 @@
+{
+  "editor.defaultFormatter": "Dart-Code.dart-code",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode"
+}

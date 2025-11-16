@@ -1,0 +1,2 @@
+to use local images in project:
+go to pubspec.yaml file and add the assets there this will register the images
