@@ -2,7 +2,13 @@
 import "package:flutter/material.dart";
 
 class StyledText extends StatelessWidget {
-  // const StyledText(String text, {super.key});
+//   Key in Flutter?
+// A Key is an identifier for widgets in the widget tree.
+// Why do we need it?
+// Flutter rebuilds widgets all the time.
+// When the UI changes, Flutter compares old and new widget trees to decide which widgets can be reused.
+// Keys help Flutter match widgets between old and new trees.
+  // const StyledText(String text, {super.key});//super.key is forwarding the key parameter to the parent class.
 // first way 
 //  StyledText(String text, {super.key}):outputText=text;
 
@@ -30,7 +36,8 @@ class StyledText extends StatelessWidget {
 // {super.key} again forwards an optional named key to the superclass.
 // Because the constructor is const and the text field is final (see below), users can write:
 // const StyledText("Hello") and the instance is a compile-time constant.
-const StyledText(this.text, {super.key});
+const StyledText(this.text, {super.key}); //this.text in the constructor means:
+// → Assign the constructor argument to the instance variable text.
 
 // Declares an immutable instance field.
 // final means the field can be assigned once (usually in the constructor) and then cannot change.
@@ -38,7 +45,16 @@ const StyledText(this.text, {super.key});
 // Using final allows the compiler and Flutter to reason about widget immutability and potential optimizations.
 // add so called class variables , property to this class 
 // now this variable is avaiable in all the methods 
-final String text; 
+final String text; // is the actual field stored in the widget.
+// StyledText("Hello");
+// automatically assigns "Hello" to the widget’s field:this.text = "Hello";
+// text declared with final?
+// Because StatelessWidget properties must be immutable.
+// Reason:
+// A StatelessWidget:
+// cannot change its fields after creation
+// does not have a setState()
+// must remain constant throughout its lifetime
 @override
 
 // build(context) returns a Text widget that displays the text field.

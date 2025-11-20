@@ -8,7 +8,7 @@ import "package:flutter/material.dart";
 // Stateless Widget comes from flutter framework
 
 // use final if you don't want to reassing value 
-// const tells vlaue is compiled time constant 
+// const tells value is compiled time constant 
 final startAlignment= Alignment.topLeft;
 final endAlignment= Alignment.bottomRight;
 
@@ -82,7 +82,7 @@ return Container(
 // extends StatelessWidget means this class is a widget that:
 // Has no mutable state (its configuration doesn't change after construction).
 // Must implement the build method which returns its subtree.
-// var startAlignment= Alignment.t opLeft;
+// var startAlignment= Alignment.topLeft;
 // var endAlignment= Alignment.bottomRight;
 // var key words can be reassigned that's why we can't add const before BoxDecoration or LinearGradient 
 
